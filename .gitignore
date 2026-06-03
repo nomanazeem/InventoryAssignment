@@ -1,0 +1,193 @@
+# Compiled class files
+*/target/
+/target/
+**/target/
+*.class
+
+# Log files
+*.log
+*.log.gz
+
+# Package files
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# Spring Boot fat jar
+[spring-boot-*].jar
+
+# IDE files
+## IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+.idea_modules/
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/shelf/
+.idea/**/contentModel.xml
+.idea/**/dataSources/
+.idea/**/dataSources.ids
+.idea/**/dataSources.local.xml
+.idea/**/sqlDataSources.xml
+.idea/**/dynamic.xml
+.idea/**/uiDesigner.xml
+.idea/**/dbnavigator.xml
+.idea/**/gradle.xml
+.idea/**/libraries/
+.idea/**/maven.xml
+.idea/**/modules.xml
+.idea/**/compiler.xml
+.idea/**/jarRepositories.xml
+.idea/**/encodings.xml
+
+## Eclipse
+.classpath
+.project
+.settings/
+.metadata/
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+.loadpath
+.factorypath
+.apt_generated/
+.springBeans
+.sts4-cache/
+
+## Visual Studio Code
+.vscode/
+.history/
+*.code-workspace
+
+## NetBeans
+nbproject/
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+# Maven
+log/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+# Gradle
+.gradle/
+gradle-app.setting
+!gradle-wrapper.jar
+gradle/wrapper/gradle-wrapper.properties
+build/
+gradle/
+buildSrc/
+.gradletasknamecache
+
+# Application generated files
+/src/main/generated/
+/generated/
+*.swp
+*.lock
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Environment & configuration
+application-local.properties
+application-dev.properties
+application-*.yml
+!application-example.yml
+!.env.example
+.env
+.env.*
+!.env.example
+*.secret
+*.key
+*.p12
+*.jks
+*.pem
+
+# Docker
+*.pid
+docker-compose.override.yml
+docker-compose.*.yml
+!docker-compose.yml
+
+# Kubernetes
+*.secret.yaml
+!*.secret.example.yaml
+.kube/
+
+# Test coverage reports
+html-report/
+test-output/
+coverage/
+.coveralls.yml
+.jacoco/
+jacoco.exec
+
+# Actuator & metrics
+/metrics/
+/health/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.temp
+*.cache
+
+# Backup files
+*.bak
+*.backup
+*.old
+*.orig
+
+# Spring Boot DevTools
+.spring-boot-devtools.properties
+
+# Misc
+*.hprof
+*.dump
+*.heap
+*.json
+!package.json
+!package-lock.json
+!tsconfig.json
+!.prettierrc
+!.eslintrc
+*.sql
+!schema.sql
+!data.sql
+
+# Lombok
+.lombok/
+.delombok/
+
+# MapStruct
+/generated-sources/
