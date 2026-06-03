@@ -87,6 +87,38 @@ curl -X POST http://localhost:8080/api/orders \
   }'
 ```
 
+# Add products with different stock levels
+
+```bash
+curl -X POST http://localhost:8081/api/inventory/products \
+-H "Content-Type: application/json" \
+-d '{"name":"Mouse","quantity":3,"price":29.99}'
+
+curl -X POST http://localhost:8081/api/inventory/products \
+-H "Content-Type: application/json" \
+-d '{"name":"Keyboard","quantity":8,"price":79.99}'
+
+curl -X POST http://localhost:8081/api/inventory/products \
+-H "Content-Type: application/json" \
+-d '{"name":"Monitor","quantity":2,"price":299.99}'
+```
+
+## Low Stock Report
+
+**Endpoint:** `GET /api/inventory/low-stock`
+
+**Parameters:**
+- `threshold` (optional, default=5): Quantity threshold
+
+**Example:**
+```bash
+# Get products with quantity < 5
+curl "http://localhost:8081/api/inventory/low-stock?threshold=5"
+
+# Get products with quantity < 10
+curl "http://localhost:8081/api/inventory/low-stock?threshold=10"
+```
+
 ## Troubleshooting
 
 | Issue | Solution |

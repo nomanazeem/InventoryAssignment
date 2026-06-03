@@ -61,4 +61,9 @@ public class InventoryController {
         inventoryService.releaseStock(productId, quantity);
         return ResponseEntity.ok().build();
     }
+    // Low stock endpoint
+    @GetMapping("/low-stock")
+    public ResponseEntity<List<Product>> getLowStockProducts(@RequestParam(defaultValue = "5") Integer threshold) {
+        return ResponseEntity.ok(inventoryService.getLowStockProducts(threshold));
+    }
 }

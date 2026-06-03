@@ -351,6 +351,22 @@ test_failure_scenarios() {
     fi
 }
 
+# Add this after test_inventory_service()
+test_low_stock_report() {
+    print_header "Testing Low Stock Report"
+
+    echo -e "\n${YELLOW}Getting low stock products (threshold=5)...${NC}"
+    LOW_STOCK=$(curl -s "$INVENTORY_URL/api/inventory/low-stock?threshold=5")
+
+    echo "Low stock products: $LOW_STOCK"
+
+    # Count low stock items
+    COUNT=$(echo "$LOW_STOCK" | jq 'length')
+    echo -e "\n${YELLOW}Found $COUNT products with low stock${NC}"
+
+    print_success "Low stock report generated successfully"
+}
+
 # Main execution
 main() {
     echo -e "${BLUE}========================================${NC}"
@@ -366,6 +382,7 @@ main() {
     test_payment_service
     test_order_service
     test_failure_scenarios
+    test_low_stock_report
 
     # Final summary
     print_header "TEST SUMMARY"
